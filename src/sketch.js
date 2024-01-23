@@ -203,7 +203,7 @@ function findPath(cell, path) {
         return false;
     }
 
-    cell.visited = true
+    cell.visited = true;
 
     if (cell.i > 0 && !cell.walls[0] && findPath(grid[cell.i - 1][cell.j], path)) {
         path.push(cell);
