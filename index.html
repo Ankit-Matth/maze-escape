@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maze Escape</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="src/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>Maze Escape - Navigate the rat to food!</h1>
+        <div id="game-canvas"></div>
+        <div class="bottom">
+            <div class="left">
+                <select id="difficulty-select">
+                    <option value="10">Easy</option>
+                    <option value="20">Medium</option>
+                    <option value="30">Hard</option>
+                </select>
+                <button id="new-button" onclick="setup()">New</button>
+                <button id="hint-button">Hint</button>
+                <button id="solve-button">Solve</button>
+            </div>
+            <div class="right">
+                <button class="arrow-button" id="up-button" onclick="moveUp()">↑</button>
+                <button class="arrow-button" id="left-button" onclick="moveLeft()">←</button>
+                <button class="arrow-button" id="right-button" onclick="moveRight()">→</button>
+                <button class="arrow-button" id="down-button" onclick="moveDown()">↓</button>
+            </div>
+        </div>
+    </div>
+  <script src="src/sketch.js"></script>
+</body>
+</html>

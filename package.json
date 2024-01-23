@@ -1,0 +1,46 @@
+{
+  "name": "maze-escape",
+  "version": "1.0.0",
+  "description": "Maze Escape - Navigate the rat to food!",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint --fix --ext .js src/",
+    "format": "prettier --write \"src/**/*.js\"",
+    "start": "live-server --port=3000"
+  },
+  "keywords": [
+    "maze-escape",
+    "p5.js",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Ankit Matth",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.23.3",
+    "@babel/preset-env": "^7.23.8",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-p5js": "^1.0.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run format",
+      "npm run lint",
+      "git add"
+    ]
+  }
+}
