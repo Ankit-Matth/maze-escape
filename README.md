@@ -13,7 +13,7 @@ I developed a game where the objective is to guide a rat through a challenging, 
 2. p5.js and p5.sound.js
 3. Dev Tools: ESLint, Prettier, Husky
 
-I employed various built-in functions such as `setup(), draw(), keyPressed(), loadSound(), play(), stop(), etc.` provided by p5.js and p5.sound.js to develop this game and integrate audio into it. In the game, players have the task of guiding a rat to its food source using arrow keys or on-screen buttons. The game offers three difficulty levels - "Easy," "Medium," and "Hard" - giving players the choice of their preferred challenge level. To enhance the gaming experience, two buttons, **"Hint"** (providing guidance on the path from the rat to the food) and **"Solve"** (automatically guiding the rat through the maze to reach the food), introduce interactive elements and strategic options for players to explore and enjoy.
+I employed various built-in functions such as `setup(), draw(), keyPressed(), loadSound(), play(), stop(), etc.` provided by p5.js and p5.sound.js to develop this game and integrate audio into it. In the game, players have the task of guiding a rat to its food source using arrow keys or on-screen buttons. The game offers three difficulty levels - `"Easy," "Medium," and "Hard"` - giving players the choice of their preferred challenge level. To enhance the gaming experience, two buttons, **"Hint"** (providing guidance on the path from the rat to the food) and **"Solve"** (automatically guiding the rat through the maze to reach the food), introduce interactive elements and strategic options for players to explore and enjoy.
 
 ## Getting Started 
 

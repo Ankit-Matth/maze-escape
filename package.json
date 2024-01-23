@@ -31,15 +31,15 @@
     "live-server": "^1.2.2",
     "prettier": "^3.2.4"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "src/*.js": [
       "npm run format",
       "npm run lint"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
