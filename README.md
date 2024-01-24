@@ -7,6 +7,9 @@ I developed a game where the objective is to guide a rat through a challenging, 
 - **Live link** - https://ankit-matth.github.io/maze-escape/ 
 
 
+https://github.com/Ankit-Matth/maze-escape/assets/146843890/74964465-581c-4036-8c1b-4c7d35a8bc6a
+
+
 ## Technologies Used
 
 1. HTML, CSS, JavaScript
