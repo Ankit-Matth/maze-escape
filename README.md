@@ -4,7 +4,7 @@ I developed a game where the objective is to guide a rat through a challenging, 
 
 ## Quick Demo
 
-- **Live link** - https://ankit-matth.github.io/maze-escape/
+- **Live link** - https://ankit-matth.github.io/maze-escape/ 
 
 
 ## Technologies Used
