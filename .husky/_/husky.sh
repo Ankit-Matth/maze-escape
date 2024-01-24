@@ -10,7 +10,7 @@ if [ -z "$husky_skip_init" ]; then
   debug "starting $hook_name..."
 
   if [ "$HUSKY" = "0" ]; then
-    debug "HUSKY env variable is set to 0, skipping hook"
+    debug "HUSKY env variable is set to 0, skipping hook" 
     exit 0
   fi
 
