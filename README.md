@@ -1,4 +1,4 @@
-# Maze Escape
+# Maze Escape - Navigate the rat to food!
 
 I developed a game where the objective is to guide a rat through a challenging, randomly generated maze to reach its food. By utilizing the p5.js library, I optimized the rendering of graphics, enhancing overall interactivity. To elevate the user experience, I incorporated audio/sound effects using p5.sound.js, aiming for both visual appeal and engagement. In addition, I also utilized development tools such as **ESLint** (used for identifying and fixing coding mistakes, and for maintaining code quality), **Prettier** (used for clean and consistent code formatting), and **Husky** (used for automatically applying linting and formatting before each commit by utilizing pre-commit hook and lint-staged) to ensure code quality and adherence to best practices. This project showcases my proficiency in javascript, p5.js, Object-Oriented Programming (OOPs), and familiarity with various development tools for robust web project development.
 
