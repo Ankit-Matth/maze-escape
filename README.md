@@ -2,8 +2,6 @@
 
 I developed this game where the objective is to guide a rat through a challenging, randomly generated maze to reach its food. By utilizing the p5.js library, I optimized the rendering of graphics, enhancing overall interactivity. To elevate the user experience, I incorporated audio/sound effects using p5.sound.js, aiming for both visual appeal and engagement. In addition, I also utilized development tools such as **ESLint** (used for identifying and fixing coding mistakes, and for maintaining code quality), **Prettier** (used for clean and consistent code formatting), and **Husky** (used for automatically applying linting and formatting before each commit by utilizing pre-commit hook and lint-staged) to ensure code quality and adherence to best practices. This project showcases my proficiency in javascript, p5.js, Object-Oriented Programming (OOPs), and familiarity with various development tools for robust web project development.
 
-I employed various built-in functions such as `setup(), draw(), keyPressed(), loadSound(), play(), stop(), etc.` provided by p5.js and p5.sound.js to develop this game and integrate audio into it. In the game, players have the task of guiding a rat to its food source using arrow keys or on-screen buttons. The game offers three difficulty levels - `"Easy," "Medium," and "Hard"` - giving players the choice of their preferred challenge level. To enhance the gaming experience, two buttons, **"Hint"** (providing guidance on the path from the rat to the food) and **"Solve"** (automatically guiding the rat through the maze to reach the food), introduce interactive elements and strategic options for players to explore and enjoy.
-
 ## Quick Demo
 
 - **Live link** - https://ankit-matth.github.io/maze-escape/ 
@@ -11,6 +9,7 @@ I employed various built-in functions such as `setup(), draw(), keyPressed(), lo
 
 https://github.com/Ankit-Matth/maze-escape/assets/146843890/74964465-581c-4036-8c1b-4c7d35a8bc6a
 
+I employed various built-in functions such as `setup(), draw(), keyPressed(), loadSound(), play(), stop(), etc.` provided by p5.js and p5.sound.js to develop this game and integrate audio into it. In the game, players have the task of guiding a rat to its food source using arrow keys or on-screen buttons. The game offers three difficulty levels - `"Easy," "Medium," and "Hard"` - giving players the choice of their preferred challenge level. To enhance the gaming experience, two buttons, **"Hint"** (providing guidance on the path from the rat to the food) and **"Solve"** (automatically guiding the rat through the maze to reach the food), introduce interactive elements and strategic options for players to explore and enjoy.
 
 ## Technologies Used
 
