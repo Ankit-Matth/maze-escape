@@ -14,6 +14,7 @@ let winSound;
 
 const difficultySelect = document.getElementById("difficulty-select");
 
+// Preload function to load images and sounds before setup
 function preload() {
     foodImage = loadImage("images/food.png");
     ratImage = loadImage("images/rat.png");
@@ -64,6 +65,7 @@ function drawRat(x, y, w, h) {
     pop();
 }
 
+// Class for each cell in the grid
 class Cell {
     constructor(i, j) {
         this.i = i;
@@ -193,6 +195,7 @@ function resetIsExistInPath() {
     }
 }
 
+// function to find path from player to destination
 function findPath(cell, path) {
     if (cell === destination) {
         path.push(cell);
@@ -228,6 +231,7 @@ function findPath(cell, path) {
     return false;
 }
 
+// Function to highlight the solution path
 function highlightPath(cell) {
     if (cell === destination) {
         return true;
@@ -261,6 +265,7 @@ function highlightPath(cell) {
 
     return false;
 }
+
 let autoSolved = false;
 const hintBtn = document.getElementById("hint-button");
 const solveBtn = document.getElementById("solve-button");
@@ -280,8 +285,10 @@ hintBtn.addEventListener("click", () => {
     }
 });
 
+// Array to store timeout IDs for auto-solving
 let timeoutIds = [];
 
+// Function to automatically solve the maze
 function solve() {
     timeoutIds.forEach((timeoutId) => {
         clearTimeout(timeoutId);
@@ -304,6 +311,7 @@ function solve() {
                             showHint();
                         }
                         if (index === path.length - 1) {
+                            winSound.setVolume(0.3);
                             winSound.play();
                             setTimeout(() => {
                                 win = true;
@@ -319,6 +327,7 @@ function solve() {
     }
 }
 
+// Function to stop auto-solving
 function stopAutoSolve() {
     timeoutIds.forEach((timeoutId) => {
         clearTimeout(timeoutId);
@@ -337,6 +346,11 @@ solveBtn.addEventListener("click", () => {
     }
 });
 
+const canvasElement = document.getElementById("game-canvas");
+let canvasWidth;
+let canvasHeight;
+
+// Function to set up the canvas and initialize the grid
 function setup() {
     grid = [];
     totalMoves = 0;
@@ -346,11 +360,11 @@ function setup() {
     stopAutoSolve();
     rowsCount = difficultySelect.value;
     colsCount = difficultySelect.value;
+    difficultySound.setVolume(0.3);
     difficultySound.play();
 
-    const canvasElement = document.getElementById("game-canvas");
-    const canvasWidth = canvasElement.clientWidth;
-    const canvasHeight = canvasElement.clientHeight;
+    canvasWidth = canvasElement.clientWidth;
+    canvasHeight = canvasElement.clientHeight;
 
     const myCanvas = createCanvas(canvasWidth, canvasHeight);
     myCanvas.parent("game-canvas");
@@ -374,6 +388,7 @@ function setup() {
     resetIsExistInPath();
 }
 
+// Function to draw on the canvas
 function draw() {
     if (win) {
         push();
@@ -385,7 +400,11 @@ function draw() {
         textSize(30);
         text("🎉👏🏆👏🎉", width / 2, height / 3.5);
 
-        textSize(40);
+        if (canvasWidth <= 350) {
+            textSize(33);
+        } else {
+            textSize(40);
+        }
         text("Congratulations!", width / 2, height / 2.4);
 
         if (autoSolved) {
@@ -448,6 +467,7 @@ function draw() {
 
 difficultySelect.addEventListener("change", () => {
     setup();
+    difficultySound.setVolume(0.3);
     difficultySound.play();
     difficultySelect.blur();
 });
@@ -458,6 +478,7 @@ function movePlayer(di, dj) {
     player.visited = true;
     moveSound.stop();
     totalMoves++;
+    moveSound.setVolume(0.3);
     moveSound.play();
 
     if (hintBtn.innerText === "Hide") {
@@ -466,6 +487,7 @@ function movePlayer(di, dj) {
     }
 
     if (player === destination) {
+        winSound.setVolume(0.3);
         winSound.play();
         setTimeout(() => {
             win = true;
@@ -497,6 +519,7 @@ function moveRight() {
     }
 }
 
+// Function to handle key presses for player movement
 function keyPressed() {
     if (keyCode === UP_ARROW) {
         moveUp();
