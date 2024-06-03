@@ -276,6 +276,8 @@ function showHint() {
 }
 
 hintBtn.addEventListener("click", () => {
+    difficultySound?.setVolume(0.2);
+    difficultySound?.play();
     if (hintBtn.innerText === "Hint") {
         hintBtn.innerText = "Hide";
         showHint();
@@ -336,6 +338,8 @@ function stopAutoSolve() {
 }
 
 solveBtn.addEventListener("click", () => {
+    difficultySound?.setVolume(0.2);
+    difficultySound?.play();
     if (solveBtn.innerText === "Solve") {
         autoSolved = true;
         solve();
@@ -352,7 +356,6 @@ let canvasHeight;
 
 // Function to set up the canvas and initialize the grid
 function setup() {
-    getAudioContext().suspend();
     grid = [];
     totalMoves = 0;
     autoSolved = false;
@@ -474,8 +477,6 @@ difficultySelect.addEventListener("change", () => {
 });
 
 function movePlayer(di, dj) {
-    // eslint-disable-next-line no-undef
-    userStartAudio();
     player.visited = false;
     player = grid[player.i + di][player.j + dj];
     player.visited = true;
