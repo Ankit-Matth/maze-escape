@@ -276,7 +276,7 @@ function showHint() {
 }
 
 hintBtn.addEventListener("click", () => {
-    difficultySound?.setVolume(0.2);
+    difficultySound?.setVolume(0.5);
     difficultySound?.play();
     if (hintBtn.innerText === "Hint") {
         hintBtn.innerText = "Hide";
@@ -313,7 +313,7 @@ function solve() {
                             showHint();
                         }
                         if (index === path.length - 1) {
-                            winSound?.setVolume(0.2);
+                            winSound?.setVolume(0.5);
                             winSound?.play();
                             setTimeout(() => {
                                 win = true;
@@ -338,7 +338,7 @@ function stopAutoSolve() {
 }
 
 solveBtn.addEventListener("click", () => {
-    difficultySound?.setVolume(0.2);
+    difficultySound?.setVolume(0.5);
     difficultySound?.play();
     if (solveBtn.innerText === "Solve") {
         autoSolved = true;
@@ -364,7 +364,7 @@ function setup() {
     stopAutoSolve();
     rowsCount = difficultySelect.value;
     colsCount = difficultySelect.value;
-    difficultySound?.setVolume(0.2);
+    difficultySound?.setVolume(0.5);
     difficultySound?.play();
 
     canvasWidth = canvasElement.clientWidth;
@@ -471,7 +471,7 @@ function draw() {
 
 difficultySelect.addEventListener("change", () => {
     setup();
-    difficultySound?.setVolume(0.2);
+    difficultySound?.setVolume(0.5);
     difficultySound?.play();
     difficultySelect.blur();
 });
@@ -482,7 +482,7 @@ function movePlayer(di, dj) {
     player.visited = true;
     moveSound?.stop();
     totalMoves++;
-    moveSound?.setVolume(0.2);
+    moveSound?.setVolume(0.5);
     moveSound?.play();
 
     if (hintBtn.innerText === "Hide") {
@@ -491,7 +491,7 @@ function movePlayer(di, dj) {
     }
 
     if (player === destination) {
-        winSound?.setVolume(0.2);
+        winSound?.setVolume(0.5);
         winSound?.play();
         setTimeout(() => {
             win = true;

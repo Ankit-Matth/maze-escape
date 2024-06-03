@@ -138,4 +138,15 @@ h1 {
   html {
     font-size: 60%;
   }
+
+  .arrow-button {
+    font-size: 10px;
+  }
+
+  #difficulty-select,
+  #new-button,
+  #hint-button,
+  #solve-button {
+    font-size: 0.8rem;
+  }
 }
