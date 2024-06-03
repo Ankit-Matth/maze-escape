@@ -311,8 +311,8 @@ function solve() {
                             showHint();
                         }
                         if (index === path.length - 1) {
-                            winSound.setVolume(0.3);
-                            winSound.play();
+                            winSound?.setVolume(0.2);
+                            winSound?.play();
                             setTimeout(() => {
                                 win = true;
                                 totalMoves = path.length - 1;
@@ -352,6 +352,7 @@ let canvasHeight;
 
 // Function to set up the canvas and initialize the grid
 function setup() {
+    getAudioContext().suspend();
     grid = [];
     totalMoves = 0;
     autoSolved = false;
@@ -360,8 +361,8 @@ function setup() {
     stopAutoSolve();
     rowsCount = difficultySelect.value;
     colsCount = difficultySelect.value;
-    difficultySound.setVolume(0.3);
-    difficultySound.play();
+    difficultySound?.setVolume(0.2);
+    difficultySound?.play();
 
     canvasWidth = canvasElement.clientWidth;
     canvasHeight = canvasElement.clientHeight;
@@ -450,7 +451,7 @@ function draw() {
         ) {
             cursor(ARROW);
             win = false;
-            winSound.stop();
+            winSound?.stop();
             setup();
         }
     } else {
@@ -467,19 +468,21 @@ function draw() {
 
 difficultySelect.addEventListener("change", () => {
     setup();
-    difficultySound.setVolume(0.3);
-    difficultySound.play();
+    difficultySound?.setVolume(0.2);
+    difficultySound?.play();
     difficultySelect.blur();
 });
 
 function movePlayer(di, dj) {
+    // eslint-disable-next-line no-undef
+    userStartAudio();
     player.visited = false;
     player = grid[player.i + di][player.j + dj];
     player.visited = true;
-    moveSound.stop();
+    moveSound?.stop();
     totalMoves++;
-    moveSound.setVolume(0.3);
-    moveSound.play();
+    moveSound?.setVolume(0.2);
+    moveSound?.play();
 
     if (hintBtn.innerText === "Hide") {
         resetIsExistInPath();
@@ -487,8 +490,8 @@ function movePlayer(di, dj) {
     }
 
     if (player === destination) {
-        winSound.setVolume(0.3);
-        winSound.play();
+        winSound?.setVolume(0.2);
+        winSound?.play();
         setTimeout(() => {
             win = true;
         }, 700);
